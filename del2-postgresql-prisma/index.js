@@ -10,6 +10,9 @@ app.use(express.json());
 //Get a user by id
 
 //Create a user
+app.post("/users", async (req, res) => {
+	//return res.status(200).json({ message: "User created successfully" });
+});
 
 //Update a user
 
@@ -17,5 +20,5 @@ app.use(express.json());
 
 //Create a server and listen on port 3000
 app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+	console.log("Server is running on port 3000");
 });
