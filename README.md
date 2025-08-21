@@ -7,10 +7,9 @@
 - Repetition
 - Svårare uppgifter finns längst ner
 
-
 ## Om ni behöver hjälp eller har frågor
 
-- Skriv på slack eller kom till klassrummet förstås :)
+- Skriv på slack eller kom till klassrummet förstås
 
 ## Kursmål
 
@@ -36,6 +35,7 @@
 
 - Skapa en SQL-databas av typen PostgreSQL
 - Installera senaste versionen PostgreSQL (om du inte redan gjort det)
+
   - <https://www.enterprisedb.com/downloads/postgres-postgresql-downloads>
   - Starta pgAdmin 4 eller använd beekeeper.io om ni vill inspektera databasen och skriva SQL-queries
     - username: postgres
@@ -47,16 +47,17 @@
 - Lägg till följande model-objekt i den nyskapade filen "schema.prisma"
 
 ```JavaScript
-model User 
+model User
 {
     id       Int    @id @default(autoincrement())
     username String @unique
     email    String @unique
     password String
-} 
+}
 ```
 
 - Uppdatera .env filen så att den pekar mot er databas med användarnamn och lösenord till postgres
+
 ```.env
 DATABASE_URL="postgresql://postgres:<password>@localhost:5432/workshop_db?schema=public"
 ```
